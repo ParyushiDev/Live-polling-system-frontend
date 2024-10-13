@@ -1,38 +1,368 @@
-.App {
-  text-align: center;
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.heading{
+    text-align: center;
+    max-width: 51rem;
+}
+.heading h1{
+    font-weight:normal;
+    font-size: 2.65rem;
+}
+.heading h1 span{
+    font-weight: bold;
+}
+.heading p{
+    font-size: 1.35rem;
+    color: #6E6E6E;
+}
+.link-btns{
+    flex-direction: row;
+    display: flex;
+    gap: 2rem;
+    max-width: 51rem;
+    margin-top: 3rem;
+}
+.btn{
+    color: black;
+    border: 2px solid #DEDEDE;
+    border-radius: 9px;
+    padding: 25px 20px 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* transition: all 150ms; */
+}
+.btn-hover{
+    border: 4px solid #7765DA;
+    padding: 23px 18px 38px;
+}
+.btn p{
+    color: #373737;
+    margin-top: 7px;
+    font-size: 1.15rem;
+}
+.continue{
+    margin-top: 3rem;
+    background-color: #5767D0;
+    border: none;
+    padding: 1.25rem 4.5rem;
+    border-radius: 999px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Student css */
+.student-heading{
+    max-width: 49.5rem;
+}
+.student-heading p{
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+.student-heading p span{
+    color: black;
+    font-weight: bold;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+    width: 100%;
+    margin-top: 3rem;
+    font-size: 17px;
+}
+.details label{
+    width: 100%;
+}
+.details span{
+    display: block;
+}
+.details input{
+    width: 92%;
+    margin-top: .5rem;
+}
+.text-input{
+    outline: none;
+    border: none;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Sora';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Teacher css */
+.teacher-container{
+    align-items: start;
+    height: 100%;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.que-form {
+    padding-left: 7rem;
+    margin-top: 6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.teacher-container .heading{
+    text-align: left;
+    max-width: 51rem;
+    margin-left: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.teacher-container .heading h1 {
+    font-size: 2.5rem;
+}
+
+.teacher-container .heading p{
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    max-width: 56rem;
+    width: 100%;
+}
+
+.q-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 19px;
+}
+.q-text span{
+    font-weight: 600;
+}
+.q-text button{
+    padding: 10px 20px 10px;
+    outline: none;
+    border: none;
+    font-family: Sora;
+}
+
+textarea{
+    font-family: 'Sora';
+    background-color: #f2f2f2;
+    height: 10rem;
+    font-size: 18px;
+    padding: 1rem 1rem;
+    padding-right: 0;
+    resize: none;
+    outline: none;
+    border: none;
+    margin-top: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    max-width: 55rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.o-text {
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 2rem;
+    width: 100%;
+}
+
+.edit-op-head {
+    width: 70%
+}
+
+.correct-head {
+    width: 30%
+}
+
+.option-row {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+
+.option-value {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+}
+
+.option-row .text-input {
+    width: 100%;
+}
+
+.option-row div {
+    display: flex;
+    width: 30%;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.option-index {
+    background-color: #7765DA;
+    border-radius: 50%;
+    font-family: monospace;
+    padding: 5px 9px;
+    color: white;
+}
+
+.option-correct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.option-correct input{
+    accent-color: #7765DA;
+    transform: scale(1.5); /* to change the size of radio button*/
+}
+
+.ask-que{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    border-top: 2px solid #DEDEDE;
+    /* padding-right: ; */
+}
+
+.ask-que .continue {
+    margin: 1rem 0;
+    margin-right: 4rem;
+}
+
+.teacher-res {
+    max-width: 45rem;
+    width: 100%;
+}
+
+/* waiting component css */
+.loader{
+   text-align: center; 
+}
+.loader img{
+    width: 8rem;
+}
+
+/* Polling form css */
+.form-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 45rem;
+    width: 100%
+}
+
+.form-container h1, .teacher-res h1 {
+    font-size: 22px;
+}
+
+.poll-form{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #7765DA;
+    border-radius: 8px;
+    width: 100%;
+}
+.poll-question{
+    background-color: #373737;
+    color: white;
+    padding: 1rem;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-weight: 600;
+}
+
+.options-container{
+    margin-top: 10px;
+    padding: 22px 22px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.options-container div {
+    border: 1px solid #DEDEDE;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.answer-selected {
+    border-color:#7765DA !important;
+    background-color: white !important;
+}
+
+.disabled-index {
+    background-color: #8D8D8D;
+}
+
+.button-row {
+    display: flex;
+}
+.button-row .continue {
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.result-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 600;
+    padding: 22px 22px 14px 14px;
+}
+
+.result-option-row {
+    display: flex;
+    background-color: #F2F2F2;
+    padding: 1rem;
+    border-radius: 6px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    position: relative;
+}
+
+.result-option-val {
+    z-index: 999;
+}
+
+.result-option-row .option-index {
+    margin-right: 0.5rem;
+    background-color: white;
+    color: #7765DA;
+}
+
+.progress {
+    position: absolute;
+    border-radius: 6px;
+    background-color: #7765DA;
+    height: 100%;
+    content: "";
+    z-index: 1;
+    left: 1px;
+    transition: width 150ms;
+}
+
+.select-percent {
+    z-index: 999;
 }
