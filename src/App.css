@@ -101,6 +101,11 @@
     width: 92%;
     margin-top: .5rem;
 }
+
+.details .continue {
+    font-size: 18px;
+}
+
 .text-input{
     outline: none;
     border: none;
