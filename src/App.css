@@ -120,12 +120,13 @@
     align-items: start;
     height: auto;
     width: 100%;
+    height: 100%;
     justify-content: space-between;
 }
 
 .que-form {
     padding-left: 7rem;
-    margin-top: 6rem;
+    margin-top: 2rem;
     max-width: 55rem;
     width: 100%;
 }
