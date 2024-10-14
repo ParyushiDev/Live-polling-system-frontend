@@ -95,13 +95,19 @@ function TeacherPage() {
                       </ul>
                     )
                   }
-
                 </div>
               </div>
-              <textarea
-                value={question}
-                onChange={(e) => setQuestion(e.target.value)}
-              ></textarea>
+              <label className="question-text">
+                <textarea
+                  value={question}
+                  onChange={(e) => {
+                    if (e.target.value.length <= 100) {
+                      setQuestion(e.target.value);
+                    }
+                  }}
+                />
+                <span>{question.length}/100</span>
+              </label>
             </div>
             <div className="options">
               <div className="o-text">
