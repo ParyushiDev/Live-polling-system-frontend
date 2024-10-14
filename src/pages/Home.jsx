@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import IntervuePollButton from "../components/IntervuePollButton";
 
 function Home() {
   const [link, setLink] = useState(1);
 
   return (
     <div className="container">
+      <IntervuePollButton />
       <div className="heading">
         <h1>
           Welcome to the <span>Live Polling System</span>

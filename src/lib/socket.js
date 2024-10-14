@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
 
-export default io("http://localhost:5000", {
+export default io("https://live-polling-system-backend.onrender.com/", {
   autoConnect: false,
 });

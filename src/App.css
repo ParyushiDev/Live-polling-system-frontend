@@ -1,3 +1,15 @@
+.intervue-poll {
+    padding: 0.5rem 1rem;
+    background-color: #5756D0;
+    color: white;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+}
+
+.intervue-poll svg {
+    margin-right: 0.5rem;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -52,7 +64,7 @@
     padding: 1.25rem 4.5rem;
     border-radius: 999px;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -100,13 +112,18 @@
 /* Teacher css */
 .teacher-container{
     align-items: start;
-    height: 100%;
+    height: auto;
+    width: 100%;
     justify-content: space-between;
 }
 
 .que-form {
     padding-left: 7rem;
     margin-top: 6rem;
+}
+
+.que-form .intervue-poll {
+    width: fit-content;
 }
 
 .teacher-container .heading{
@@ -146,6 +163,30 @@
     outline: none;
     border: none;
     font-family: Sora;
+}
+
+.q-text div {
+    position: relative;
+}
+
+.q-text div span {
+    font-weight: 500;
+    background-color: #f2f2f2;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.time-dropdown {
+    position: absolute;
+    z: 999;
+    width: 81%;
+    background-color: #f2f2f2;
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.35);
 }
 
 textarea{
@@ -216,6 +257,7 @@ textarea{
     font-family: monospace;
     padding: 5px 9px;
     color: white;
+    text-align: center;
 }
 
 .option-correct {
@@ -231,6 +273,17 @@ textarea{
     transform: scale(1.5); /* to change the size of radio button*/
 }
 
+.add-option {
+    border: 2px solid #7765DA;
+    color: #7765DA;
+    padding: 1rem;
+    margin-left: 9.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 .ask-que{
     display: flex;
     align-items: center;
@@ -238,10 +291,11 @@ textarea{
     width: 100%;
     border-top: 2px solid #DEDEDE;
     /* padding-right: ; */
+    margin-bottom: 1rem;
 }
 
 .ask-que .continue {
-    margin: 1rem 0;
+    margin-top: 1rem;
     margin-right: 4rem;
 }
 
@@ -266,6 +320,12 @@ textarea{
     width: 100%
 }
 
+.form-container header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
 .form-container h1, .teacher-res h1 {
     font-size: 22px;
 }
@@ -278,6 +338,7 @@ textarea{
     border-radius: 8px;
     width: 100%;
 }
+
 .poll-question{
     background-color: #373737;
     color: white;
@@ -365,4 +426,61 @@ textarea{
 
 .select-percent {
     z-index: 999;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    color: #c00;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.pls-wait {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
+/* Past Results */
+.past-res-container {
+    display: flex;
+    height: 100%;
+}
+
+.past-results-col {
+    margin-top: 5rem;
+    margin-left: 30%;
+    width: 80%;
+    margin-right: 2rem;
+}
+
+.past-results-col header {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.past-results {
+    padding-right: 42%;
+    max-height: 50rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.response-container {
+    margin-bottom: 2rem;
+}
+
+.view-past-link {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: #8F64E1;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 999px;
 }

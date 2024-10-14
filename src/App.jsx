@@ -3,8 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import TeacherPage from "./pages/TeacherPage";
 import StudentPage from "./pages/StudentPage";
-import PollForm from "./components/PollForm";
-import KickOut from "./components/KickOut";
+import PastResults from "./pages/PastResults";
 
 const browserRouter = createBrowserRouter([
   {
@@ -20,12 +19,8 @@ const browserRouter = createBrowserRouter([
     element: <StudentPage />,
   },
   {
-    path: "/polling-form",
-    element: <PollForm />,
-  },
-  {
-    path: "/kick-out",
-    element: <KickOut />,
+    path: "/past-results",
+    element: <PastResults />
   },
 ]);
 function App() {

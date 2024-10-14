@@ -1,4 +1,5 @@
 import PollResult from "./PollResult";
+import Timer from "./Timer";
 
 function PollForm({
   question: { question, options },
@@ -6,12 +7,22 @@ function PollForm({
   pollingState,
   setAnswer,
   handleSubmit,
+  time,
+  setTime
 }) {
-  console.log(question);
   return (
     <div className="form-container">
       <header>
         <h1>Question</h1>
+        {
+          pollingState === "answering" &&
+            <Timer
+              time={time}
+              setTime={setTime}
+              handleSubmit={handleSubmit}
+            />
+        }
+
       </header>
 
       {pollingState === "answering" ? (
@@ -40,13 +51,21 @@ function PollForm({
             </div>
           </div>
           <div className="button-row">
-            <button className="continue" onClick={handleSubmit}>
+            <button className="continue" onClick={() => {
+                      setTime(60);
+                      handleSubmit();
+                    }}>
               Submit
             </button>
           </div>
         </>
       ) : (
-        <PollResult question={question} options={options} />
+        <>
+          <PollResult question={question} options={options} />
+          <div className="pls-wait">
+            Wait for the teacher to ask a new question..
+          </div>
+        </>
       )}
     </div>
   );
